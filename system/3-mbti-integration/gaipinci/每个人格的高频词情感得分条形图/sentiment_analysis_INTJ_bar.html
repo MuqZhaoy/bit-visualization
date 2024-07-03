@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+                <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+
+</head>
+<body >
+    <div id="310504dd416041f8a0ff6adf6fb26357" class="chart-container" style="width:1500px; height:500px; "></div>
+    <script>
+        var chart_310504dd416041f8a0ff6adf6fb26357 = echarts.init(
+            document.getElementById('310504dd416041f8a0ff6adf6fb26357'), 'white', {renderer: 'canvas'});
+        var option_310504dd416041f8a0ff6adf6fb26357 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "bar",
+            "name": "Sentiment Score",
+            "legendHoverLink": true,
+            "data": [
+                0.11228313671061763,
+                0.03687867450561197,
+                0.029424127784783524,
+                0.08513027852650494,
+                0.06610604998832048,
+                -0.06666666666666667,
+                0.047474747474747475,
+                0.10378838825375476,
+                0.04862508383635144,
+                0.0364403528960491,
+                0.04369197160021846,
+                0.01361182820934053,
+                0.3402322059565876,
+                0.08269230769230769,
+                0.06651198762567673,
+                0.03226913834534844,
+                -0.02787121576165305,
+                0.10934393638170974,
+                -0.007575757575757576,
+                0.2411153635866594,
+                -0.015653220951234198,
+                0.3267389917038928,
+                0.12942430703624733,
+                0.10799420518898986,
+                0.048112603966730644,
+                0.5530487804878049,
+                0.15396578538102643,
+                -0.002875629043853343,
+                0.05817068503635668,
+                0.11499639509733237,
+                -0.05745721271393643,
+                0.10501930501930502,
+                0.11612903225806452,
+                0.22794552989934871,
+                0.012295081967213115,
+                0.0819234194122885,
+                -0.007228915662650603,
+                0.24349442379182157,
+                -0.043835616438356165,
+                0.041313168572482475
+            ],
+            "realtimeSort": false,
+            "showBackground": false,
+            "stackStrategy": "samesign",
+            "cursor": "pointer",
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": false,
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "Sentiment Score"
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "xAxis": [
+        {
+            "name": "Words",
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "axisLabel": {
+                "show": true,
+                "rotate": 45,
+                "margin": 8,
+                "interval": 0
+            },
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": true,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "like",
+                "think",
+                "people",
+                "know",
+                "get",
+                "intj",
+                "really",
+                "time",
+                "say",
+                "want",
+                "could",
+                "see",
+                "good",
+                "something",
+                "make",
+                "feel",
+                "even",
+                "things",
+                "never",
+                "find",
+                "someone",
+                "always",
+                "way",
+                "go",
+                "ca",
+                "love",
+                "lot",
+                "going",
+                "type",
+                "me.",
+                "need",
+                "actually",
+                "first",
+                "well",
+                "take",
+                "many",
+                "sure",
+                "pretty",
+                "still",
+                "person"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "name": "Sentiment Score",
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": true,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "show": true,
+            "text": "Sentiment Analysis for INTJ MBTI Type",
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "continuous",
+        "min": -1,
+        "max": 1,
+        "text": [
+            "Low Score",
+            "High Score"
+        ],
+        "inRange": {
+            "color": [
+                "#BAEAFF",
+                "#E15457"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "dimension": 1,
+        "hoverLink": true,
+        "orient": "horizontal",
+        "left": "center",
+        "padding": 5,
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 140,
+        "borderWidth": 0
+    }
+};
+        chart_310504dd416041f8a0ff6adf6fb26357.setOption(option_310504dd416041f8a0ff6adf6fb26357);
+    </script>
+</body>
+</html>

@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required Meta Tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Document Title, Description, and Author -->
+  <title>MBTI</title>
+  <meta name="description" content="Hawk Pro is a Bootstrap 5 One Page Template.">
+
+  <!-- Favicon and Touch Icons -->
+  <link rel="icon" type="image/png" sizes="512x512" href="{{url_for('static',filename='img/malloy.png')}}">
+
+  <!-- Google Fonts Files -->
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> -->
+
+  <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+  <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts-wordcloud.min.js"></script>
+  <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+  <!-- CSS Files -->
+  <!-- <link rel="stylesheet" href="./assets/css/hawk-pro-bsb.css"> -->
+  <link rel="stylesheet" href="{{url_for('static',filename='css/hawk-pro-bsb.css')}}">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@10.2.0/swiper-bundle.min.css"> -->
+  <style>
+    #scrollspyHero .display-1 {
+      margin-top: -200px; /* Adjust this value to move the title up or down */
+    }
+  </style>
+
+  <!-- BSB Head -->
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#bsb-tpl-navbar" data-bs-smooth-scroll="true" tabindex="0">
+
+  <!-- Header -->
+  <header id="header">
+
+    <!-- Hero 4 Pro - Bootstrap Brain Component -->
+    <section id="scrollspyHero" class="bsb-hero-4-pro px-3 bsb-overlay jarallax-hero" data-jarallax data-speed="0.2">
+      <img class="jarallax-img" src="{{ url_for('static', filename='img/main.jpg') }}" alt="">
+      <div class="container">
+        <div class="row justify-content-md-center align-items-center">
+          <div class="col-12 col-md-11 col-lg-9 col-xl-8 col-xxl-7">
+            <h1 class="display-1 text-white text-center fw-bold mb-4">人格的色彩</h1>
+            <p class="lead text-white text-center mb-5 d-flex justify-content-sm-center">
+              <span class="col-12 col-sm-10 col-md-8 col-xxl-7">每种人格都带着独特的色彩。有些人热情如火、有些人冷艳如冰。本研究正是用可视化地手段，将MBTI理论中所涉及到的人格多样性用直观的可视化方式呈现出来，人生原本多彩。</span>
+            </p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <button type="button" class="btn bsb-btn-2xl btn-outline-light">By 袁泽龙</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </header>
+
+  <!-- Main -->
+  <main id="main">
+
+    <!-- Section - About -->
+    <!-- About 5 - Bootstrap Brain Component -->
+    <section id="scrollspyAbout" class="py-3 py-md-5 py-xl-8 pb-xxl-0 bsb-section-pt-xxl-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-10 col-lg-8">
+            <h2 class="display-5 fw-bold mb-4">如今普及度最高的人格分类法</h2>
+            <!-- <button type="button" class="btn btn-lg btn-primary mb-3 mb-md-4 mb-xl-5">Discover More</button> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="container overflow-hidden">
+        <div class="row gy-4 gy-lg-0">
+          <div class="col-12 col-lg-6">
+            <article>
+              <div class="card border-0">
+                <img class="card-img-top img-fluid m-0" loading="lazy" src="{{ url_for('static', filename='img/about-img-1.jpg') }}" alt="">
+                <div class="card-body border bg-white p-4">
+                  <div class="entry-header mb-3">
+                    <h2 class="card-title entry-title h4 mb-0">
+                      <a class="link-dark text-decoration-none" href="#!">学术背景</a>
+                    </h2>
+                  </div>
+                  <p class="card-text entry-summary text-secondary mb-3">MBTI（Myers-Briggs Type Indicator）是基于卡尔·荣格心理类型理论的个性测试工具，由凯瑟琳·布里格斯和伊莎贝尔·布里格斯·迈尔斯在20世纪中期开发。MBTI通过评估外向/内向、感觉/直觉、思考/情感、判断/知觉四个维度，帮助人们了解自己的性格类型。</p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-lg-6">
+            <article>
+              <div class="card border-0">
+                <img class="card-img-top img-fluid m-0" loading="lazy" src="{{ url_for('static', filename='img/about-img-2.jpg') }}" alt="">
+                <div class="card-body border bg-white p-4">
+                  <div class="entry-header mb-3">
+                    <h2 class="card-title entry-title h4 mb-0">
+                      <a class="link-dark text-decoration-none" href="#!">社交属性</a>
+                    </h2>
+                  </div>
+                  <p class="card-text entry-summary text-secondary mb-3">MBTI已经成为了部分年轻群体交友的重要参考标签之一，MBTI正在成为陌生人之间的常见的破冰话题。许多年轻人将自己的MBTI类型挂上社交首页，以此彰显着自己的社交身份，并将MBTI类型作为交友的判准：INFP和ENFJ是“灵魂伴侣”， INTJ和ESFP能成为很好的合作伙伴……</p>
+                </div>
+              </div>
+          
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call To Action 3 - Bootstrap Brain Component -->
+    <section class="bsb-cta-3 py-3 py-md-5 py-xl-8 pb-xxl-0 bsb-section-pt-xxl-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-10 col-lg-8">
+            <h2 class="display-5 fw-bold mb-4">我们引以为傲的部分</h2>
+            <!-- <button type="button" class="btn btn-lg btn-primary mb-3 mb-md-4 mb-xl-5">Discover More</button> -->
+          </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="container-fluid bg-accent border shadow">
+              <div class="row">
+                <div class="col-12 col-md-6 p-0">
+                  <div class="card border-0 bg-transparent">
+                    <div class="card-body text-center p-5 p-xl-8">
+                      <h4 class="fw-bold mb-4">基于BART模型的模型构建</h4>
+                      <p class="mb-4 mb-xl-5 text-secondary">本模型是基于BART模型，采用seq to seq的方式来解决Aspect-based sentiment analysis (ABSA)问题。基于方面的情感分析（ABSA）旨在预测给定文本的情感元素组成的元组。ABSA研究的主要线包括四个情感元素：方面术语（a）、方面类别（c）、意见术语（o）和情感极性（s）。给定一个示例句子，“I love the sushi badly!”（我非常喜欢寿司！），相应的元素分别是“寿司”、“食品质量”、“喜欢”和“积极”。</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 p-0 border-top border-bottom border-start">
+                  <div class="card border-0 bg-transparent">
+                    <div class="card-body text-center p-5 p-xl-8">
+                      <h4 class="fw-bold mb-4">顶会论文复现</h4>
+                      <p class="mb-4 mb-xl-5 text-secondary">同时为了提高准确率更好的分析mbti每种人格的评论，我们复现了一篇发表在2023年ACL（nlp方向顶会）上的这方面较为前沿的论文，并迁移到我们这个任务上，论文名是MvP: Multi-view Prompting Improves Aspect Sentiment Tuple Prediction，该模型通过多视图联合预测的方式有效提高了准确率。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img class="card-img-top img-fluid m-0" loading="lazy" src="{{ url_for('static', filename='img/nb.png') }}" alt="">
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+<!-- Call To Action 3 - Bootstrap Brain Component -->
+    <section class="bsb-cta-3 py-3 py-md-5 py-xl-8 pb-xxl-0 bsb-section-pt-xxl-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-10 col-lg-11">
+            <h3 class="display-5 fw-bold mb-4">外向 E 与 内向 I</h3>
+            <h4>E 和 I 代表着迈尔斯-布里格斯类型指标（MBTI）中的外向（Extraversion）和内向（Introversion）。外向型人格者通常喜欢社交活动，他们倾向于在与他人的互动中获得能量，并在社交场合表现出开放和积极的态度。相对地，内向型人格者则更倾向于独处或与小团体的深入交流，他们从内部世界的思考和反省中汲取能量。全球范围内，外向与内向的人群比例分布各异，这反映了不同文化背景下对社交行为的不同期待和鼓励。下图直观显示了世界各地外向型人格者的占比情况，通过这种可视化，我们可以更好地理解全球文化差异如何塑造个体的性格和社交偏好。</h4>
+            <!-- <button type="button" class="btn btn-lg btn-primary mb-3 mb-md-4 mb-xl-5">Discover More</button> -->
+            {{graph_html_map_e|safe}}
+            </div>
+        </div>
+    
+
+        <div class="row">
+          <div class="col-12 col-md-10 col-lg-11">
+            <h3 class="display-5 fw-bold mb-4">感觉 S 与 直觉 N</h3>
+            <h4>S 和 N 在迈尔斯-布里格斯类型指标（MBTI）中分别代表感觉（Sensing）和直觉（Intuition）。感觉型的人格者注重现实和细节，依赖于通过感官获取的具体信息，而直觉型的人则更倾向于关注未来的可能性和抽象概念，信赖直觉和想象力。这两种认知风格在全球范围内的分布反映了不同文化对实际经验和创新思维的偏好。下图提供了一个直观的视图，展示了世界各地感觉型人格者的占比情况，通过颜色的深浅可以看出各地区对于感觉型人格的普及程度，揭示了全球文化差异如何影响个体的感知方式和决策过程。</h4>
+            <!-- 这里插入 S 的图表的 HTML 代码 -->
+            {{graph_html_map_s|safe}}
+          </div>
+        </div>
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-10 col-lg-11">
+              <h3 class="display-5 fw-bold mb-4">情感 F 与 思维 T</h3>
+              <h4>F 和 T 在迈尔斯-布里格斯类型指标（MBTI）中分别代表情感（Feeling）和思维（Thinking）。情感型人格者在决策时倾向于强调个人情绪和价值观，注重人际关系的和谐及他人的感受。相对地，思维型人格者则更依赖于逻辑分析和客观事实，追求效率和原则的一致性。全球不同地区对这两种决策方式的偏好反映了文化背景的影响。下图提供了一个全球视角，展示了情感型人群的占比，通过颜色的深浅，我们可以看到各地区对情感或逻辑取向的倾向，进而理解文化如何塑造人们的决策和交际方式。</h4>
+              <!-- 这里插入 F 的图表的 HTML 代码 -->
+              {{graph_html_map_f|safe}}
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-10 col-lg-11">
+              <h3 class="display-5 fw-bold mb-4">知觉 P 与 判断 J</h3>
+              <h4>P 和 J 在迈尔斯-布里格斯类型指标（MBTI）中代表知觉（Perceiving）和判断（Judging）。判断型的人喜欢有序和计划性地处理事务，更倾向于事先组织和确定，追求明确的结论和条理。相比之下，知觉型的人更加灵活和开放，他们喜欢在保持选项开放的状态下应对生活，更能适应不断变化的环境。这种性格差异在全球范围内的分布揭示了不同文化对结构和自由流动性的不同重视程度。例如，在高度重视效率和规则的社会中，判断型个体可能占多数；而在强调灵活性和 spontaneity 的文化中，知觉型个体更为常见。下图直观地显示了全世界范围内知觉型人群的占比，揭示了全球各地对于这两种处理方式的偏好，从而深入理解文化如何影响人们的行为和决策方式。</h4>
+              <!-- 这里插入 J 的图表的 HTML 代码 -->
+              {{graph_html_map_p|safe}}
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-10 col-lg-11">
+              <h3 class="display-5 fw-bold mb-4">社交媒体上不同人格的存在感</h3>
+              <h4>虽然不同人格类型的绝对数量在全球范围内差异可能不大，但在互联网上，不同人格类型的表达和参与度却表现出明显的差异。为了探究这一现象，我们选取了一个具体的时间截面来进行分析，专注于统计这一期间内不同人格类型在社交媒体上的活动量。通过这种方法，我们能够量化并比较各人格类型的“存在感”，即他们在数字空间中的活跃程度和影响力。</h4>
+              <!-- 这里插入 J 的图表的 HTML 代码 -->
+              {{graph_html_rose|safe}}
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-10 col-lg-11">
+              <h3 class="display-5 fw-bold mb-4">不同人格的正负面情绪占比</h3>
+              <h4>为了更精确地分析社交媒体上不同MBTI人格类型的表达和情感倾向，我们开发了一个基于BART架构的高级自然语言处理模型。该模型采用序列到序列（seq to seq）方式，专注于解决基于方面的情感分析（ABSA）问题。ABSA技术旨在从文本中提取和预测关键情感元素，如方面术语（Aspect Term）、方面类别（Aspect Category）、意见术语（Opinion Term）及情感极性（Sentiment Polarity）。以下是16种人格的情感极性可视化：</h4>
+              <!-- 这里插入 J 的图表的 HTML 代码 -->
+              {{graph_html_circle|safe}}
+              {{graph_html_nightingale|safe}}
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-10 col-lg-11">
+              <h3 class="display-5 fw-bold mb-4">INFP: 小蝴蝶</h3>
+              <h4>INFP（内向、直觉、情感、知觉）是一种由迈尔斯-布里格斯类型指标（MBTI）定义的人格类型，通常被称为“调停者”。这种人格类型以其理想主义、深厚的情感和丰富的想象力著称。INFP 通常具有强烈的理想主义和愿景，关注道德和伦理问题，追求公正和平等。作为内向型人格，INFP 更喜欢独处以反思和充电，并通过写作、艺术或其他创造性活动表达自己。INFP 对自己的情感非常敏感，并且能够深刻理解他人的感受，成为优秀的倾听者和同情心丰富的朋友。他们富有创造力和洞察力，喜欢探索新的想法和可能性。INFP 通常灵活且适应性强，喜欢开放的、非结构化的环境。他们在帮助和支持他人方面非常出色，但也可能过于理想化和情绪敏感。INFP 在需要创意和个人表达的职业中表现出色，例如作家、艺术家、心理咨询师、社会工作者和教师。</h4>
+              <!-- 这里插入 F 的图表的 HTML 代码 -->
+              <div class="col-12">
+                <img class="card-img-top img-fluid m-0" loading="lazy" src="{{ url_for('static', filename='img/butterfly.png') }}" alt="">
+                {{graph_html_wordcloud|safe}}
+                <img class="card-img-top img-fluid m-0" loading="lazy" src="{{ url_for('static', filename='img/infp_sun.jpg') }}" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="92c123072dc14680947c21d4a7efd63c" class="chart-container" style="width:1500px; height:500px; "></div>
+        <script>
+            var chart_92c123072dc14680947c21d4a7efd63c = echarts.init(
+                document.getElementById('92c123072dc14680947c21d4a7efd63c'), 'white', {renderer: 'canvas'});
+            var option_92c123072dc14680947c21d4a7efd63c = {
+        "animation": true,
+        "animationThreshold": 2000,
+        "animationDuration": 1000,
+        "animationEasing": "cubicOut",
+        "animationDelay": 0,
+        "animationDurationUpdate": 300,
+        "animationEasingUpdate": "cubicOut",
+        "animationDelayUpdate": 0,
+        "aria": {
+            "enabled": false
+        },
+        "color": [
+            "#5470c6",
+            "#91cc75",
+            "#fac858",
+            "#ee6666",
+            "#73c0de",
+            "#3ba272",
+            "#fc8452",
+            "#9a60b4",
+            "#ea7ccc"
+        ],
+        "series": [
+            {
+                "type": "bar",
+                "name": "Sentiment Score",
+                "legendHoverLink": true,
+                "data": [
+                    0.1855566700100301,
+                    0.15623879526712084,
+                    0.12240762812872467,
+                    0.16931001762233971,
+                    0.15932626325639426,
+                    0.12135384615384616,
+                    0.10319351763584365,
+                    0.2544642857142857,
+                    0.6544889234356782,
+                    0.1188715953307393,
+                    0.18347886029411764,
+                    0.3921219822109276,
+                    0.36817788045047645,
+                    0.21257861635220127,
+                    0.13626509755342212,
+                    0.08278145695364239,
+                    0.14510204081632652,
+                    0.1417388873357562,
+                    0.12549072695275484,
+                    0.1070559610705596,
+                    0.2533024333719583,
+                    0.08718282368249837,
+                    0.21460989842230388,
+                    0.1771201413427562,
+                    0.3136604774535809,
+                    0.20689413578084495,
+                    0.13044645596808838,
+                    0.13629518072289157,
+                    0.15477129337539433,
+                    0.3142978003384095,
+                    0.667291120269764,
+                    0.20642201834862386,
+                    0.22607110300820418,
+                    0.010583941605839416,
+                    0.22311111111111112,
+                    0.11094396389620158,
+                    0.1537323370570393,
+                    0.1333014811275681,
+                    0.10191570881226053,
+                    0.21510755377688845
+                ],
+                "realtimeSort": false,
+                "showBackground": false,
+                "stackStrategy": "samesign",
+                "cursor": "pointer",
+                "barMinHeight": 0,
+                "barCategoryGap": "20%",
+                "barGap": "30%",
+                "large": false,
+                "largeThreshold": 400,
+                "seriesLayoutBy": "column",
+                "datasetIndex": 0,
+                "clip": true,
+                "zlevel": 0,
+                "z": 2,
+                "label": {
+                    "show": false,
+                    "margin": 8
+                }
+            }
+        ],
+        "legend": [
+            {
+                "data": [
+                    "Sentiment Score"
+                ],
+                "selected": {},
+                "show": true,
+                "padding": 5,
+                "itemGap": 10,
+                "itemWidth": 25,
+                "itemHeight": 14,
+                "backgroundColor": "transparent",
+                "borderColor": "#ccc",
+                "borderRadius": 0,
+                "pageButtonItemGap": 5,
+                "pageButtonPosition": "end",
+                "pageFormatter": "{current}/{total}",
+                "pageIconColor": "#2f4554",
+                "pageIconInactiveColor": "#aaa",
+                "pageIconSize": 15,
+                "animationDurationUpdate": 800,
+                "selector": false,
+                "selectorPosition": "auto",
+                "selectorItemGap": 7,
+                "selectorButtonGap": 10
+            }
+        ],
+        "tooltip": {
+            "show": true,
+            "trigger": "item",
+            "triggerOn": "mousemove|click",
+            "axisPointer": {
+                "type": "line"
+            },
+            "showContent": true,
+            "alwaysShowContent": false,
+            "showDelay": 0,
+            "hideDelay": 100,
+            "enterable": false,
+            "confine": false,
+            "appendToBody": false,
+            "transitionDuration": 0.4,
+            "textStyle": {
+                "fontSize": 14
+            },
+            "borderWidth": 0,
+            "padding": 5,
+            "order": "seriesAsc"
+        },
+        "xAxis": [
+            {
+                "name": "Words",
+                "show": true,
+                "scale": false,
+                "nameLocation": "end",
+                "nameGap": 15,
+                "gridIndex": 0,
+                "axisLabel": {
+                    "show": true,
+                    "rotate": 45,
+                    "margin": 8,
+                    "interval": 0
+                },
+                "inverse": false,
+                "offset": 0,
+                "splitNumber": 5,
+                "minInterval": 0,
+                "splitLine": {
+                    "show": true,
+                    "lineStyle": {
+                        "show": true,
+                        "width": 1,
+                        "opacity": 1,
+                        "curveness": 0,
+                        "type": "solid"
+                    }
+                },
+                "data": [
+                    "like",
+                    "think",
+                    "people",
+                    "really",
+                    "know",
+                    "get",
+                    "feel",
+                    "infp",
+                    "love",
+                    "want",
+                    "time",
+                    "good",
+                    "always",
+                    "things",
+                    "could",
+                    "even",
+                    "say",
+                    "something",
+                    "see",
+                    "never",
+                    "lot",
+                    "someone",
+                    "way",
+                    "make",
+                    "find",
+                    "go",
+                    "ca",
+                    "going",
+                    "me.",
+                    "pretty",
+                    ":)",
+                    "actually",
+                    "first",
+                    "need",
+                    "life",
+                    "got",
+                    "thing",
+                    "still",
+                    "type",
+                    "many"
+                ]
+            }
+        ],
+        "yAxis": [
+            {
+                "name": "Sentiment Score",
+                "show": true,
+                "scale": false,
+                "nameLocation": "end",
+                "nameGap": 15,
+                "gridIndex": 0,
+                "inverse": false,
+                "offset": 0,
+                "splitNumber": 5,
+                "minInterval": 0,
+                "splitLine": {
+                    "show": true,
+                    "lineStyle": {
+                        "show": true,
+                        "width": 1,
+                        "opacity": 1,
+                        "curveness": 0,
+                        "type": "solid"
+                    }
+                }
+            }
+        ],
+        "title": [
+            {
+                "show": true,
+                "text": "Sentiment Analysis for INFP MBTI Type",
+                "target": "blank",
+                "subtarget": "blank",
+                "padding": 5,
+                "itemGap": 10,
+                "textAlign": "auto",
+                "textVerticalAlign": "auto",
+                "triggerEvent": false
+            }
+        ],
+        "visualMap": {
+            "show": true,
+            "type": "continuous",
+            "min": -1,
+            "max": 1,
+            "text": [
+                "Low Score",
+                "High Score"
+            ],
+            "inRange": {
+                "color": [
+                    "#BAEAFF",
+                    "#E15457"
+                ]
+            },
+            "calculable": true,
+            "inverse": false,
+            "splitNumber": 5,
+            "dimension": 1,
+            "hoverLink": true,
+            "orient": "horizontal",
+            "left": "center",
+            "padding": 5,
+            "showLabel": true,
+            "itemWidth": 20,
+            "itemHeight": 140,
+            "borderWidth": 0
+        }
+    };
+            chart_92c123072dc14680947c21d4a7efd63c.setOption(option_92c123072dc14680947c21d4a7efd63c);
+        </script>
+
+      </div>
+
+    </section>  
+
+    <!-- Section - Services -->
+    <!-- Service 7 - Bootstrap Brain Component -->
+    <section id="scrollspyServices" class="bsb-service-7 py-3 py-md-5 py-xl-8 pb-xxl-0 bsb-section-pt-xxl-1">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+            <!-- <h3 class="fs-5 mb-2 text-secondary text-center text-uppercase">Services</h3> -->
+            <h2 class="display-5 fw-bold mb-5 mb-xl-9 text-center">报告在此结束<br>但对自我的探索从未结束<br>谢谢大家</h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="container-fluid bg-accent border shadow">
+              <div class="row">
+                <div class="col-12 col-md-4 p-0">
+                  <div class="card border-0 bg-transparent">
+                    <div class="card-body text-center p-5">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor" class="bi bi-basket2-fill text-primary mb-4" viewBox="0 0 16 16">
+                        <path d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383L5.93 1.757zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1z" />
+                      </svg>
+                      <h4 class="fw-bold text-uppercase mb-4">Strategy</h4>
+                      <p class="mb-4 text-secondary">The first phase is to develop a strategy for the product or service that the tech company is developing. This involves understanding the market needs.</p>
+                      <a href="#!" class="fw-bold text-decoration-none link-primary">
+                        Learn More
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4 p-0 border-top border-bottom border-start border-end">
+                  <div class="card border-0 bg-transparent">
+                    <div class="card-body text-center p-5">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor" class="bi bi-rocket text-primary mb-4" viewBox="0 0 16 16">
+                        <path d="M8 8c.828 0 1.5-.895 1.5-2S8.828 4 8 4s-1.5.895-1.5 2S7.172 8 8 8Z" />
+                        <path d="M11.953 8.81c-.195-3.388-.968-5.507-1.777-6.819C9.707 1.233 9.23.751 8.857.454a3.495 3.495 0 0 0-.463-.315A2.19 2.19 0 0 0 8.25.064.546.546 0 0 0 8 0a.549.549 0 0 0-.266.073 2.312 2.312 0 0 0-.142.08 3.67 3.67 0 0 0-.459.33c-.37.308-.844.803-1.31 1.57-.805 1.322-1.577 3.433-1.774 6.756l-1.497 1.826-.004.005A2.5 2.5 0 0 0 2 12.202V15.5a.5.5 0 0 0 .9.3l1.125-1.5c.166-.222.42-.4.752-.57.214-.108.414-.192.625-.281l.198-.084c.7.428 1.55.635 2.4.635.85 0 1.7-.207 2.4-.635.067.03.132.056.196.083.213.09.413.174.627.282.332.17.586.348.752.57l1.125 1.5a.5.5 0 0 0 .9-.3v-3.298a2.5 2.5 0 0 0-.548-1.562l-1.499-1.83ZM12 10.445v.055c0 .866-.284 1.585-.75 2.14.146.064.292.13.425.199.39.197.8.46 1.1.86L13 14v-1.798a1.5 1.5 0 0 0-.327-.935L12 10.445ZM4.75 12.64C4.284 12.085 4 11.366 4 10.5v-.054l-.673.82a1.5 1.5 0 0 0-.327.936V14l.225-.3c.3-.4.71-.664 1.1-.861.133-.068.279-.135.425-.199ZM8.009 1.073c.063.04.14.094.226.163.284.226.683.621 1.09 1.28C10.137 3.836 11 6.237 11 10.5c0 .858-.374 1.48-.943 1.893C9.517 12.786 8.781 13 8 13c-.781 0-1.517-.214-2.057-.607C5.373 11.979 5 11.358 5 10.5c0-4.182.86-6.586 1.677-7.928.409-.67.81-1.082 1.096-1.32.09-.076.17-.135.236-.18Z" />
+                        <path d="M9.479 14.361c-.48.093-.98.139-1.479.139-.5 0-.999-.046-1.479-.139L7.6 15.8a.5.5 0 0 0 .8 0l1.079-1.439Z" />
+                      </svg>
+                      <h4 class="fw-bold text-uppercase mb-4">Design</h4>
+                      <p class="mb-4 text-secondary">Once the strategy is in place, the next phase is to design the product or service. This involves creating wireframes, prototypes, and mockups.</p>
+                      <a href="#!" class="fw-bold text-decoration-none link-primary">
+                        Learn More
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4 p-0">
+                  <div class="card border-0 bg-transparent">
+                    <div class="card-body text-center p-5">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor" class="bi bi-incognito text-primary mb-4" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="m4.736 1.968-.892 3.269-.014.058C2.113 5.568 1 6.006 1 6.5 1 7.328 4.134 8 8 8s7-.672 7-1.5c0-.494-1.113-.932-2.83-1.205a1.032 1.032 0 0 0-.014-.058l-.892-3.27c-.146-.533-.698-.849-1.239-.734C9.411 1.363 8.62 1.5 8 1.5c-.62 0-1.411-.136-2.025-.267-.541-.115-1.093.2-1.239.735Zm.015 3.867a.25.25 0 0 1 .274-.224c.9.092 1.91.143 2.975.143a29.58 29.58 0 0 0 2.975-.143.25.25 0 0 1 .05.498c-.918.093-1.944.145-3.025.145s-2.107-.052-3.025-.145a.25.25 0 0 1-.224-.274ZM3.5 10h2a.5.5 0 0 1 .5.5v1a1.5 1.5 0 0 1-3 0v-1a.5.5 0 0 1 .5-.5Zm-1.5.5c0-.175.03-.344.085-.5H2a.5.5 0 0 1 0-1h3.5a1.5 1.5 0 0 1 1.488 1.312 3.5 3.5 0 0 1 2.024 0A1.5 1.5 0 0 1 10.5 9H14a.5.5 0 0 1 0 1h-.085c.055.156.085.325.085.5v1a2.5 2.5 0 0 1-5 0v-.14l-.21-.07a2.5 2.5 0 0 0-1.58 0l-.21.07v.14a2.5 2.5 0 0 1-5 0v-1Zm8.5-.5h2a.5.5 0 0 1 .5.5v1a1.5 1.5 0 0 1-3 0v-1a.5.5 0 0 1 .5-.5Z" />
+                      </svg>
+                      <h4 class="fw-bold text-uppercase mb-4">Development</h4>
+                      <p class="mb-4 text-secondary">Once the design is finalized, the next phase is to develop the product or service. This involves writing code, building databases, and creating assets.</p>
+                      <a href="#!" class="fw-bold text-decoration-none link-primary">
+                        Learn More
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+    </section>
+
+  </main>
+
+
+  <!-- Javascript Files: Vendors -->
+  <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/jarallax@2.1.3/dist/jarallax.min.js"></script>
+  <script src="https://unpkg.com/swiper@10.2.0/swiper-bundle.min.js"></script>
+
+  <!-- Javascript Files: Controllers -->
+  <script src="./assets/controller/hawk-pro-bsb.js"></script>
+  <script src="./assets/controller/testimonial-4.js"></script>
+  <script src="./assets/controller/blog-3.js"></script>
+  <script src="./assets/controller/pricing-3.js"></script>
+  <script src="./assets/controller/contact-4.js"></script>
+  <script src="./assets/controller/fact-5.js"></script>
+  <script src="./assets/controller/skill-2.js"></script>
+
+  <!-- BSB Body End -->
+</body>
+
+</html>
