@@ -14,7 +14,7 @@
 
 如果需要本地部署，在文件夹中运行
 
-![image-20240703134252275](D:\Picture\Typora\image-20240703134252275.png)
+![sys-1](..\pic\sys-1.png)
 
 ```shell
 python app.py
@@ -22,11 +22,11 @@ python app.py
 
 可以看到系统成功运行
 
-![image-20240703133729051](D:\Picture\Typora\image-20240703133729051.png)
+![sys-2](..\pic\sys-2.png)
 
 点击网页可打开，看到演示网页
 
-<img src="D:\Picture\Typora\image-20240703133722662.png" alt="image-20240703133722662" style="zoom:150%;" />
+![sys-3](..\pic\sys-3.png)
 
 在展现过程中，我们同时也将该网页部署到了服务器上供大家访问，是利用`nginx`进行的反向代理
 
@@ -34,7 +34,7 @@ python app.py
 
 该文件为`mbti`的世界地图系统，需要进入到`mbtimap2`文件夹后
 
-![image-20240703134422013](D:\Picture\Typora\image-20240703134422013.png)
+![sys-4](..\pic\sys-4.png)
 
 运行命令
 
@@ -45,18 +45,18 @@ npm run serve
 
 可以看到系统成功运行
 
-![image-20240703134517936](D:\Picture\Typora\image-20240703134517936.png)
+![sys-5](..\pic\sys-5.png)
 
 点击可以打开网页，看到运行的地图
 
-![image-20240703134601901](D:\Picture\Typora\image-20240703134601901.png)
+![sys-6](..\pic\sys-6.png)
 
 ## 4. mbti-integration
 
 该文件是第一版的集成文件，点击`index.html`即可打开
 
-![image-20240703134936311](D:\Picture\Typora\image-20240703134936311.png)
+![sys-7](..\pic\sys-7.png)
 
 以下是成果
 
-![image-20240703134923415](D:\Picture\Typora\image-20240703134923415.png)
+![sys-8](..\pic\sys-8.png)

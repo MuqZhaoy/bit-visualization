@@ -12,7 +12,7 @@
 
 在文件夹内运行`python app.py`即可在本地部署，在服务器使用`nginx`做反向代理后可部署到服务器
 
-![image-20240703144035454](D:\Picture\Typora\image-20240703144035454.png)
+![1](pic\readme-1.png)
 
 ### 2-mbti-worldmap
 
@@ -22,7 +22,7 @@
 
 在`mbtimap2`文件夹中运行`npm i`和`npm run serve`即可运行该系统
 
-![image-20240703144105211](D:\Picture\Typora\image-20240703144105211.png)
+![2](pic\readme-2.png)
 
 ### 3-mbti-integration
 
@@ -32,4 +32,4 @@
 
 在文件夹直接点开`index.html`即可打开项目
 
-![image-20240703144251058](D:\Picture\Typora\image-20240703144251058.png)
+![3](pic/readme-3.png)
